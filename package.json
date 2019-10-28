@@ -3,19 +3,24 @@
   "version": "1.0.0",
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
+    "start": "http-server -p 9009",
     "cypress:run": "cypress run",
     "cypress:open": "cypress open",
     "cypress:verify": "cypress verify",
     "cypress:version": "cypress version",
     "list-videos": "ls -l cypress/videos",
     "check-videos": "ok-file 'cypress/videos/*.mp4'",
-    "set-status": "set-status"
+    "set-status": "set-status",
+    "open": "start-server-and-test start http://localhost:9009 cypress:open"
   },
   "keywords": [],
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "ok-file": "1.4.0"
+    "cypress": "^3.5.0",
+    "http-server": "^0.11.1",
+    "ok-file": "1.4.0",
+    "start-server-and-test": "^1.10.6"
   },
   "repository": {
     "type": "git",
